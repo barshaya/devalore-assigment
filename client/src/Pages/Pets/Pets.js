@@ -4,16 +4,15 @@ import { getPets } from "../../services/petServices";
 import './Pets.css'
 
 function Pets() {
-  const [pets, setPets] = useState(null);
+  const [pets, setPets] = useState([]);
   const [total, setTotal] = useState(0);
 
   useEffect(() => {
     getPets().then((res) => {
       const data = res.data;
       setPets(data);
-      setTotal(pets.length);
-    });
-  }, []);
+    }).then(setTotal(pets.length));
+  }, [pets]);
 
   return (
     <>
