@@ -1,27 +1,28 @@
 import React, { useEffect, useState } from "react";
 import Pet from "../../components/PetCard";
 import { getPets } from "../../services/petServices";
+import './Pets.css'
 
 function Pets() {
-  const [pets, setPets] = useState([]);
-
-  //   for (let i = 0; i < pets.length; i++) {
-  //     total.push(pets[i].age);
-  //   }
+  const [pets, setPets] = useState(null);
+  const [total, setTotal] = useState(0);
 
   useEffect(() => {
     getPets().then((res) => {
       const data = res.data;
       setPets(data);
+      setTotal(pets.length);
     });
   }, []);
+
   return (
-    <div>
+    <>
+      {pets&& <p className="pets-total">total : {total}</p>}    
       {pets &&
         pets.map((pet) => {
           return <Pet key={pet._id} pet={pet}/>;
         })}
-    </div>
+    </>
   );
 }
 

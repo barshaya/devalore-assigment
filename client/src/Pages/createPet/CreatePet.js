@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import Form from "../../../components/Form/Form";
-import { addPet } from "../../../services/petServices";
+import Form from "../../components/Form/Form";
+import { addPet } from "../../services/petServices";
 import { CircularProgress } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import "../createPet/createPet.css";
+import "./createPet.css";
 
 function CreatePet() {
 

@@ -1,5 +1,5 @@
 import Pets from './Pages/Pets/Pets';
-import CreatePet from './Pages/Pets/createPet/CreatePet';
+import CreatePet from './Pages/createPet/CreatePet';
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import './App.css'
 
