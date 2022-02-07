@@ -29,14 +29,14 @@ function Form({ onSubmit, className }) {
           value="Black"
           checked
         />
-        <label for="Black">Black</label>
+        <label>Black</label>
 
         <input
           {...register("color", { required: true })}
           type="radio"
           value="White"
         />
-        <label for="White">White</label>
+        <label>White</label>
       </div>
       <input type="submit" value="Create Pet" />
     </form>

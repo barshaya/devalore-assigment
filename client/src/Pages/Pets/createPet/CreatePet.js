@@ -12,7 +12,7 @@ function CreatePet() {
 
 
   const switchToPets= () => {
-    navigate('/pets')
+    navigate('/pets');
   }
 
   const onSubmit = (data) => {
@@ -38,7 +38,7 @@ function CreatePet() {
   {loading ? 
   <CircularProgress /> : <Form className="form-container" onSubmit={onSubmit} />
   } 
-  <button className="button-pets" onSubmit={switchToPets}>Show Pets</button>
+  <button className="button-pets" onClick={()=>switchToPets()}>Show Pets</button>
   </>);
 }
 
