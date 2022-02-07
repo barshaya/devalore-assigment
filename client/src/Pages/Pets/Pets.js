@@ -11,7 +11,13 @@ function Pets() {
     getPets().then((res) => {
       const data = res.data;
       setPets(data);
-    }).then(setTotal(pets.length));
+      console.log('change')
+    });
+  }, []);
+
+
+  useEffect(() => {
+  setTotal(pets.length);
   }, [pets]);
 
   return (
